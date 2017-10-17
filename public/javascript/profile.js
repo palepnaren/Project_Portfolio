@@ -34,6 +34,7 @@ $(function(){
             else addrs[newAddr] = true;
             var displayAddr = Object.keys(addrs).filter(function(k){return addrs[k];});
             myip = displayAddr;
+            consol.log(myip);
             //            if(displayAddr.length>1){
             //                myip = displayAddr[0];
             //            }else{
