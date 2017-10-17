@@ -1,0 +1,552 @@
+body{
+    width: 100%;
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+}
+
+#bg-video{
+    position: relative;
+    min-height: 100%;
+    min-width: 100%;
+    width: auto;
+    height: auto;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+    z-index: 2;
+    opacity: 0.65; 
+}
+
+#custom-video{
+    width: 100%;
+    height: 100%;
+}
+
+#tx-video p{
+    position: absolute;
+    z-index: 8;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    font-size: 36px;
+    color: black;
+
+}
+
+/*
+#profile-img{
+position: absolute;
+top: 0;
+left: 0;
+width: 100%;
+min-height: 720px;
+background-color: rgba(200,0,0,0.3);
+z-index: 8;
+}
+*/
+
+#profile-img img{
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    z-index: 8;
+    width: 150px;
+    height: 150px;
+}
+
+nav.fixed-navbar{
+    position: fixed;
+    width: 100%;
+    height: 70px;
+    top: 0px;
+    z-index: 100;
+    margin: 0px;
+}
+
+nav.fixed-navbar.effects:after{
+    content: "";
+    display: inline-block;
+    z-index: 10;
+    vertical-align:bottom;
+    width: 110px;
+    height: 110px;
+    border-spacing: 40px;
+    background:rgba(96,112,119,0.9) url("/images/pic.jpeg") center / cover;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -o-box-sizing: border-box;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -o-border-radius: 50%;
+    margin-top: 40px;
+    margin-left: 50%;
+    transform: translate(-50%,-20%);
+    border:5px solid rgba(96,112,119,0.9);   
+}
+
+.content{
+    margin-top: -6px;
+    width: 100%;
+    height: 500px;
+    background: black;
+    overflow: hidden;
+}
+.container{
+    width: auto;   
+}
+
+#aboutMe{
+    margin: 40px;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+#indent{
+    text-indent: 30px;
+    color: dimgrey;
+    font-size: 16px;
+}
+
+#contact{
+    margin: 0px;
+    width: auto;
+    height: 600px;
+    background: rgba(96,112,119,0.9);
+    overflow: hidden;
+}
+
+div#number p{
+    text-align: center;
+    font-size: 16px;
+    position: relative;
+    bottom: -100px;
+    color: blue;
+}
+
+label{
+    position: absolute;
+    top: 5px;
+    left: 20px;
+
+}
+#form{
+    margin-top: 50px;
+}
+
+#form-name,#form-email,#form-subject,#form-message,#form-buttons{
+    margin: 20px;
+}
+
+input#name,input#email,input#subject,textarea#message{
+    width: 200px;
+
+}
+label:after { 
+    content:"*"; 
+    color: red;
+    padding: 3px;
+}
+#submit{
+    position: relative;
+    left: 15%;
+    transform: (-50%,-30%);
+}
+#reset{
+    position: relative;
+    right: 18%;
+    transform: (-50%,-30%);
+}
+
+div#heading{
+    margin-top: 20px;
+    text-align: center;
+    font-size: 28px;
+    color: blue;
+}
+
+#download{
+    margin-top: 0;
+    width: 100%;
+    height: 400px;
+    background: rgba(0,0,0,0.9);
+}
+
+div.git > p{
+    position: relative;
+    text-align: center;
+    font-size: 36px;
+    color: whitesmoke;
+    top: 80px;
+}
+
+.git > p > a{
+    font-size: 24px;
+    color: blue;
+}
+
+.git > p#source{
+    margin-top: 30px;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    font-size: 24px;
+    width: 200px;
+    border: 1px solid blue;
+    padding: 5px;
+
+}
+
+.alert{
+    margin-top: -20px;
+    width: 700px;
+    position: relative;
+    left: 25%;
+    transform: translate(-50%,10%);
+}
+
+
+#redirect{
+    margin-top: 20px;
+    position: relative;
+    left: 20%;
+    transform: translate(50%,-50%);
+
+}
+
+.hide{
+    display: none;
+}
+
+#map{
+    width: 100%;
+    height: 300px;
+    background-color: yellow;
+
+}
+
+#credits{
+    position: absolute;
+    right: 0px;
+    bottom: 0px;
+    color: greenyellow;
+    font-size: 6px;
+}
+
+#resume{
+    display: none;
+}
+
+#aboutMe > p{
+    text-align: justify;
+}
+
+li{
+    display: inline;
+    padding: 10px;
+    z-index: 10;
+
+}
+nav ul.left{
+    position: absolute;
+    top: 20px;
+    width: 100%;
+    list-style-type: none;
+}
+
+nav ul.right{
+    position: absolute;
+    margin-right: 60px;
+    z-index: 100;
+    top: 10px;
+    right: 0px;
+    list-style-type: none;
+
+}
+nav ul.right li{
+    float: right;
+    margin-right: 20px;
+
+}
+#navbar-custom > ul.right > li.social-media{
+    display: none;
+}
+
+footer ul.left{
+    position: relative;
+    top: 20px;
+    list-style-type: none;
+}
+
+footer ul.right{
+    position: relative;
+    margin-right: 60px;
+    top: -20px;
+    right: 0px;
+    list-style-type: none;
+
+}
+
+footer ul.right li{
+    float: right;
+}
+
+footer ul.left li#likes{
+    border: 1px solid blue;
+}
+
+footer ul.right li{
+    color: red;
+}
+
+
+a{
+    color: chartreuse;
+    font-size: 18px;
+}
+a:hover{
+    text-decoration: none;
+    color: white;
+}
+
+a.active{
+    background-color: blue;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+a:active{
+    background-color: orange;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+#navbar-custom > ul.left > li.icon{
+    display: none;
+}
+
+@media only screen and (max-width:750px){
+
+    footer ul.right{
+        position: relative;
+        top: 20px;
+        float: right;
+            
+    }
+
+    #navbar-custom{
+        background: rgba(0,2,0,0.9);
+    }
+
+    #navbar-custom > ul.left > li:not(:first-child){
+        display: none;
+    }
+
+    #navbar-custom > ul.right >li{
+        display: none;
+    }
+
+    #navbar-custom > ul.left > li.icon{
+        display: block;
+        float: right;
+        margin-right: 20px;
+        margin-top: -10px;
+    }
+
+    div#tx-video > p{
+        top: 22%;
+        font-size: 24px;
+    }
+
+    #profile-img img{
+        width: 100px;
+        height: 100px;
+        top: 35%;
+    }
+
+    #bg-video{
+        width: 100%;
+        height: 100%;
+        background-size: cover;
+    }
+
+
+
+}
+
+@media only screen and (max-width:750px){
+
+    #navbar-custom.responsive-navbar > ul.left > li:not(:last-child){
+        display: block;
+        float: none;
+    }
+
+    #navbar-custom.responsive-navbar > ul.left > li.icon{
+        position: absolute;
+        top: 0;
+        right: 0;
+    }
+
+    #navbar-custom.responsive-navbar > ul.right >li{
+        position: relative;
+        display: block;
+        float: none;
+        top: 10px;
+    }
+
+    #navbar-custom.responsive-navbar{
+        height: 240px;
+        background: rgba(0,2,0,0.9);
+    }
+
+
+}
+
+@media only screen and (max-width:850px){
+    label{
+        position: absolute;
+        top: 5px;
+        left: 20px;
+
+    }
+    #form{
+        margin-top: 50px;
+    }
+
+    #form-name,#form-email,#form-subject,#form-message,#form-buttons{
+        margin: 20px;
+    }
+
+    input#name,input#email,input#subject,textarea#message{
+        width: 200px;
+
+    }  
+}
+
+@media only screen and (max-width:600px){
+    
+    label{
+        position: absolute;
+        top: 5px;
+        left: 20px;
+
+    }
+    #form{
+        margin-top: 50px;
+    }
+
+    #form-name,#form-email,#form-subject,#form-message,#form-buttons{
+        margin: 20px;
+    }
+
+    input#name,input#email,input#subject,textarea#message{
+        width: 200px;
+
+    }  
+}
+/*extra small devices*/
+@media only screen and (max-width : 480px) {
+    
+    div#number{
+        position: relative;
+        bottom: 40px;
+    }
+
+    footer ul.left li#likes{
+        display: none;
+    }
+    
+    footer ul.right{
+        position: relative;
+        top: 20px;
+        left: -25px;
+        float: right;
+            
+    }
+
+    #submit{
+        position: relative;
+        left: 1%;
+        transform: (-50%,-30%);
+    }
+    #reset{
+        position: relative;
+        right: 9%;
+        transform: (-50%,-30%);
+    }
+    #aboutMe{
+        margin: 40px;
+        padding: 20px;
+        box-sizing: border-box;
+    }
+    .content{
+        overflow-y: scroll;
+    }
+
+}
+
+/*small devices*/
+@media only screen and (min-width:481px) and (max-width : 650px) {
+
+    div#number{
+        position: relative;
+        bottom: 40px;
+    }
+
+    #submit{
+        position: relative;
+        left: 5%;
+        transform: (-50%,-30%);
+    }
+    #reset{
+        position: relative;
+        right: 15%;
+        transform: (-50%,-30%);
+    }
+}
+
+@media only screen and (min-width:651px) and (max-width : 700px){
+    div#number{
+        position: relative;
+        bottom: 40px;
+    }
+}
+
+@media only screen and (min-width:651px) and (max-width : 750px) {
+
+    #submit{
+        position: relative;
+        left: 3%;
+        transform: (-50%,-30%);
+    }
+    #reset{
+        position: relative;
+        right: 25%;
+        transform: (-50%,-30%);
+    }
+}
+
+/*medium devices*/
+@media only screen and (min-width:751px) and (max-width : 992px) {
+    #submit{
+        position: relative;
+        left: 1%;
+        transform: (-50%,-30%);
+    }
+    #reset{
+        position: relative;
+        right: 30%;
+        transform: (-50%,-30%);
+    }
+
+}
+
+
+
+
+
+
+
+
