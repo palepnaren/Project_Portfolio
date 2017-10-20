@@ -33,7 +33,7 @@ $(function(){
             if(newAddr in addrs)return;
             else addrs[newAddr] = true;
             var displayAddr = Object.keys(addrs).filter(function(k){return addrs[k];});
-            myip = displayAddr;
+            myip = displayAddr[0];
             console.log(myip);
             //            if(displayAddr.length>1){
             //                myip = displayAddr[0];
@@ -67,7 +67,7 @@ $(function(){
     var counter =0;
     var ip = "";
     var value = 0;
-    var ipToCheck=[];
+    var ipToCheck="";
     var view = 0;
     var navs = $('nav ul li:not(:last-child) a');
     var navHeight = $('nav').height();
@@ -176,86 +176,75 @@ $(function(){
 
     $('footer .fa').on('click', function(){
 
-        //console.log("my ip address:"+myip);
-        //console.log(ipToCheck);
-        for(var j=0;j<ipToCheck.length;j++){
-            for(var i=0;i<myip.length;i++){
-                //console.log(ipToCheck[j].address);
-                if(ipToCheck[j].address == myip[i]){
-                    Track.like = 1;
-                    var json = JSON.stringify(Track);
-                    $.ajax({
-                        type:"POST",
-                        url:"/save",
-                        data:json,
-                        contentType: "application/json; charset=utf-8",
-                        dataType:"json"
 
-                    }).done(function(data){
+        if(ipToCheck == myip){
+            Track.like = 1;
+            var json = JSON.stringify(Track);
+            $.ajax({
+                type:"POST",
+                url:"/save",
+                data:json,
+                contentType: "application/json; charset=utf-8",
+                dataType:"json"
 
-                    });
-                    
-                    getData(function(data){
-                        counter = data;
-                        if(counter==null){
-                        $('#value').text(counter);
-                        $('footer .fa').css('color','red');
-                    }else{
-                        alert("You have liked the page already..");
-                        $('#value').text(counter);
-                        $('footer .fa').css('color','red');
-                        //$(this).off('click'); 
-                    }
-                    });
+            }).done(function(data){
 
-                    
+            });
+
+            getData(function(data){
+                counter = data;
+                if(counter==null){
+                    $('#value').text(counter);
+                    $('footer .fa').css('color','red');
                 }else{
-
+                    alert("You have liked the page already..");
+                    $('#value').text(counter);
+                    $('footer .fa').css('color','red');
+                    //$(this).off('click'); 
                 }
-            }
+            });
+
+
+        }else{
+
         }
     });
 
-    if(ipToCheck.length==0){
-        $.getJSON("/ip",function(data){
 
-            if(data!=null){
-                $.each(data,function(i,item){
-                    ipToCheck[i] = item;
-                });
-            }
-        });
-    }else{
-
-    }
 
 
     windows.on('load',function(){
 
-        for(var a=0;a<ipToCheck.length;a++){
-            for(var b=0;b<myip.length;b++){
-                if(ipToCheck[a].address==myip[b]){
-                    ip=myip[b];
-                }
-            }
-        }
+        getIp(myip,function(data){
+            ipToCheck=data;
 
-        Track.ipaddress = ip;
-        Track.views = 1;
-        var json = JSON.stringify(Track);
-        $.ajax({
-            type:"POST",
-            url:"/save",
-            data:json,
-            contentType: "application/json; charset=utf-8",
-            dataType:"json"
-        }).done(function(data){
-            console.log(data);
-            views=data.views;
-            counter = data.like;
-            console.log(counter);
+            if(ipToCheck==myip){
+                ip=myip;
+                setIp(ip);
+            }else{
+                alert("not equal");
+            }
 
         });
+
+        function setIp(ip){
+            Track.ipaddress = ip;
+            Track.views = 1;
+            var json = JSON.stringify(Track);
+            $.ajax({
+                type:"POST",
+                url:"/save",
+                data:json,
+                contentType: "application/json; charset=utf-8",
+                dataType:"json"
+            }).done(function(data){
+                console.log(data);
+                views=data.views;
+                counter = data.like;
+                console.log(counter);
+
+            });
+        }
 
         $('#trigger').on('click',function(){
             $('#dialog').dialog({
@@ -283,6 +272,15 @@ $(function(){
 
         //console.log(localStorage.getItem('likes'));
     });
+
+    function getIp(myip,callback){
+        $.get("/ip/"+myip,function(data){
+
+            if(data!=null){
+                callback(data);
+            }
+        });
+    }
 
 
     function getData(callback){

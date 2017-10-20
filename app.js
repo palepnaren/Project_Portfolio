@@ -16,7 +16,7 @@ app.use(session({secret:"jajbdddjhsauqusavxhjvjjhxjajX", resave: false, saveUnin
 
 
 app.get('/',routes.home);
-app.get('/ip',routes.ip);
+app.get('/ip/:ipaddress',routes.ip);
 app.post('/email',routes.email);
 app.post('/save',routes.save);
 app.get('/getlikes',routes.retrive);

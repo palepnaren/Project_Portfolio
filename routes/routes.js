@@ -1,5 +1,6 @@
 var os = require('os');
 var fs = require('fs');
+var dns = require('dns');
 var chalk = require('chalk');
 const mailer = require('nodemailer');
 var mongooes = require('mongoose');
@@ -18,12 +19,15 @@ Object.keys(interfaces).forEach(function(name){
 });
 
 exports.home =function(req,res){
+    //console.log(chalk.green(req.info.remoteAddress));
     res.render('profile');
 }
 
 exports.ip = function(req,res){
+    var ipaddress = req.params.ipaddress;
 
-    res.json(ipaddress);
+
+    res.send(ipaddress);
 }
 
 exports.email = function(req,res){
