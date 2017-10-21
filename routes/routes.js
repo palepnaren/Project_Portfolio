@@ -62,7 +62,7 @@ exports.email = function(req,res){
 
     let mailOptions = {
         from: name+'<'+email+'>',
-        to: 'pnaren93@gmail.com',
+        to: 'pnr549@gmail.com',
         subject: subject,
         text: message+' \n <'+email+'>'
     };
