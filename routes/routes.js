@@ -48,16 +48,16 @@ exports.email = function(req,res){
     }
 
     let transpoter = mailer.createTransport({
-        service: 'gmail',
-        port:25,
-        secure:false,
+        host: 'smtp.gmail.com',
+        port:465,
+        secure:true,
         auth:{
             user:config.username,
             pass:config.password
-        },
-        tls:{
-            rejectUnauthorized:false
         }
+//        tls:{
+//            rejectUnauthorized:false
+//        }
     });
 
     let mailOptions = {
