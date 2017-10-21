@@ -2,7 +2,7 @@
 
 var $ = jQuery.noConflict();
 $(function(){
-    //localStorage.removeItem('likes');
+
     var myip="";
 
     var Track ={};
@@ -34,7 +34,7 @@ $(function(){
             else addrs[newAddr] = true;
             var displayAddr = Object.keys(addrs).filter(function(k){return addrs[k];});
             myip = displayAddr[0];
-            console.log(myip);
+            //            console.log(myip);
             //            if(displayAddr.length>1){
             //                myip = displayAddr[0];
             //            }else{
@@ -177,7 +177,38 @@ $(function(){
     $('footer .fa').on('click', function(){
 
 
-        if(ipToCheck == myip){
+        if(ipToCheck == myip){        
+            checkLike(myip,function(data){
+                counter = data.like;
+                if(counter==null){
+                    getData(function(data){
+                        counter = data;
+                        $('#value').text(counter);
+                        $('footer .fa').css('color','red');
+                    });
+                }else{
+                    getData(function(data){
+                        counter = data;
+                        alert("You have liked the page already..");
+                        $('#value').text(counter);
+                        $('footer .fa').css('color','red'); 
+                    });
+                }
+            });
+
+            //            getData(function(data){
+            //                counter = data;
+            //                if(counter==null){
+            //                    $('#value').text(counter);
+            //                    $('footer .fa').css('color','red');
+            //                }else{
+            //                    alert("You have liked the page already..");
+            //                    $('#value').text(counter);
+            //                    $('footer .fa').css('color','red');
+            //                    //$(this).off('click'); 
+            //                }
+            //            });
+
             Track.like = 1;
             var json = JSON.stringify(Track);
             $.ajax({
@@ -191,23 +222,14 @@ $(function(){
 
             });
 
-            getData(function(data){
-                counter = data;
-                if(counter==null){
-                    $('#value').text(counter);
-                    $('footer .fa').css('color','red');
-                }else{
-                    alert("You have liked the page already..");
-                    $('#value').text(counter);
-                    $('footer .fa').css('color','red');
-                    //$(this).off('click'); 
-                }
-            });
-
 
         }else{
-
+            confirm("We are unable to consider you like now. Try again later..!");
         }
+        
+        $(window).on('load',function(){
+            
+        });
     });
 
 
@@ -253,13 +275,30 @@ $(function(){
             }); 
         });
 
-        getData(function(data){
-            value= data;
-            if(value != null){
-                $('#value').text(value);
-                $('footer .fa').css('color','red');
+        checkLike(myip,function(data){
+            value = data.like;
+            if(value==null){
+                getData(function(data){
+                    value = data;
+                    $('#value').text(value); 
+                });
+            }else{
+                getData(function(data){
+                    value = data;
+                    $('#value').text(value);
+                    $('footer .fa').css('color','red');
+                });
             }
+
         });
+
+        //        getData(function(data){
+        //            value= data;
+        //            if(value != null){
+        //                $('#value').text(value);
+        //                $('footer .fa').css('color','red');
+        //            }
+        //        });
 
         getViews(function(data){
             view = data;
@@ -276,6 +315,14 @@ $(function(){
     function getIp(myip,callback){
         $.get("/ip/"+myip,function(data){
 
+            if(data!=null){
+                callback(data);
+            }
+        });
+    }
+
+    function checkLike(ip,callback){
+        $.get("/likes/"+ip,function(data){
             if(data!=null){
                 callback(data);
             }

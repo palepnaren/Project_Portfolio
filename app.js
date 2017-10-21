@@ -21,6 +21,7 @@ app.post('/email',routes.email);
 app.post('/save',routes.save);
 app.get('/getlikes',routes.retrive);
 app.get('/getVews',routes.views);
+app.get('/likes/:ip',routes.checkLikesByIP);
 
 var port = process.env.PORT || 9000;
 app.listen(port,function(req,res){

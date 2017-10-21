@@ -1,22 +1,21 @@
-var os = require('os');
+//var os = require('os');
 var fs = require('fs');
-var dns = require('dns');
+//var dns = require('dns');
 var chalk = require('chalk');
 const mailer = require('nodemailer');
 var mongooes = require('mongoose');
 var Track = mongooes.model('Tracking');
 var config = JSON.parse(fs.readFileSync('config.json'));
-var ipaddress = [];
-var interfaces = os.networkInterfaces();
-Object.keys(interfaces).forEach(function(name){
-    interfaces[name].forEach(function(type){
-        ipaddress.push({
-            address : type.address,
-            family : type.family,
-            mac : type.mac
-        });
-    });
-});
+//var interfaces = os.networkInterfaces();
+//Object.keys(interfaces).forEach(function(name){
+//    interfaces[name].forEach(function(type){
+//        ipaddress.push({
+//            address : type.address,
+//            family : type.family,
+//            mac : type.mac
+//        });
+//    });
+//});
 
 exports.home =function(req,res){
     //console.log(chalk.green(req.info.remoteAddress));
@@ -127,6 +126,7 @@ exports.retrive = function(req,res){
     Track.count({like:1},function(err,count){
         if(err){
             console.log(chalk.red('No entries in database found'));
+            res.status(404).send("No entries found.");
         }
         res.status(200).json(count);
     });
@@ -134,11 +134,24 @@ exports.retrive = function(req,res){
 
 }
 
+exports.checkLikesByIP = function(req,res){
+    let ip = req.params.ip;
+    
+    Track.findOne({ipaddress:ip},function(err,data){
+        if(err){
+            res.status(404).send("No entries found.");
+            return;
+        }
+       res.status(200).json(data); 
+    });
+}
+
 exports.views = function(req,res){
 
     Track.count({views:1},function(err,count){
         if(err){
             console.log(chalk.red('No entries in database found'));
+            res.status(404).send("No entries found.");
         }
         res.status(200).json(count);
     });
