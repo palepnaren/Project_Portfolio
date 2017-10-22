@@ -271,6 +271,9 @@ footer ul.right{
     list-style-type: none;
 
 }
+#trigger{
+    overflow: scroll;
+}
 
 footer ul.right li{
     float: right;
