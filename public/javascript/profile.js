@@ -272,8 +272,8 @@ $(function(){
             $('#dialog').dialog({
                 height:650,
                 width:450,
-                draggable:true,
-                resizable:true,
+                draggable:false,
+                resizable:false,
                 closeOnEscape:true
             });
 //            $(this)..scrollByLines(3);
