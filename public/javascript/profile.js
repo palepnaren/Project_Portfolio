@@ -276,7 +276,7 @@ $(function(){
                 resizable:true,
                 closeOnEscape:true
             });
-            $(this).css("overflow-y","scroll");
+            $(this)..scrollByLines(3);
         });
 
         checkLike(myip,function(data){
