@@ -276,7 +276,7 @@ $(function(){
                 resizable:true,
                 closeOnEscape:true
             });
-            $(this)..scrollByLines(3);
+//            $(this)..scrollByLines(3);
         });
 
         checkLike(myip,function(data){
