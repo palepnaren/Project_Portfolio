@@ -276,6 +276,8 @@ $(function(){
                 resizable:false,
                 closeOnEscape:true
             });
+            
+            $('#dialog').css("overflow","scroll");
         });
 
         checkLike(myip,function(data){
