@@ -276,7 +276,6 @@ $(function(){
                 resizable:false,
                 closeOnEscape:true
             });
-//            $(this)..scrollByLines(3);
         });
 
         checkLike(myip,function(data){
