@@ -268,16 +268,16 @@ $(function(){
             });
         }
 
-        $('#trigger').on('click',function(){
-            $('#dialog').dialog({
-                height:650,
-                width:450,
-                draggable:false,
-                resizable:false,
-                closeOnEscape:true
-            });
-            
-        });
+//        $('#trigger').on('click',function(){
+//            $('#dialog').dialog({
+//                height:650,
+//                width:450,
+//                draggable:false,
+//                resizable:false,
+//                closeOnEscape:true
+//            });
+//            
+//        });
 
         checkLike(myip,function(data){
             value = data.like;
