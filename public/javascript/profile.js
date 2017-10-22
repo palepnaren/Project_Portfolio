@@ -122,7 +122,7 @@ $(function(){
     $('#email-form').on("submit",function(e){
         alert("email sent successfully");
         window.setTimeout(function(){
-            window.location.href("https://narentest.herokuapp.com/");
+            window.location.assign("https://narentest.herokuapp.com/");
         },1000);
     });
 
