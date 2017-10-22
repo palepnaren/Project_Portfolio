@@ -120,9 +120,10 @@ $(function(){
     });
     
     $('#email-form').on("submit",function(e){
-        e.preventDefault();
         alert("email sent successfully");
-        window.location.assign("/");
+        window.setTimeout(function(){
+            window.location.assign("/");
+        },1000);
     });
 
     $("#collapse-navbar").on('click',function(){
