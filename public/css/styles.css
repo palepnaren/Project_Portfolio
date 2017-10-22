@@ -272,7 +272,8 @@ footer ul.right{
 
 }
 #dialog{
-    overflow: scroll;
+   -webkit-overflow-scrolling: touch;
+    overflow-y: scroll;
 }
 
 footer ul.right li{
