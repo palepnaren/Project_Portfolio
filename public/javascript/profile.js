@@ -63,7 +63,6 @@ $(function(){
     })();
 
 
-    //localStorage.removeItem('counter');
     var counter =0;
     var ip = "";
     var value = 0;
@@ -196,18 +195,6 @@ $(function(){
                 }
             });
 
-            //            getData(function(data){
-            //                counter = data;
-            //                if(counter==null){
-            //                    $('#value').text(counter);
-            //                    $('footer .fa').css('color','red');
-            //                }else{
-            //                    alert("You have liked the page already..");
-            //                    $('#value').text(counter);
-            //                    $('footer .fa').css('color','red');
-            //                    //$(this).off('click'); 
-            //                }
-            //            });
 
             Track.like = 1;
             var json = JSON.stringify(Track);
@@ -268,17 +255,6 @@ $(function(){
             });
         }
 
-//        $('#trigger').on('click',function(){
-//            $('#dialog').dialog({
-//                height:650,
-//                width:450,
-//                draggable:false,
-//                resizable:false,
-//                closeOnEscape:true
-//            });
-//            
-//        });
-
         checkLike(myip,function(data){
             value = data.like;
             if(value==null){
@@ -296,13 +272,6 @@ $(function(){
 
         });
 
-        //        getData(function(data){
-        //            value= data;
-        //            if(value != null){
-        //                $('#value').text(value);
-        //                $('footer .fa').css('color','red');
-        //            }
-        //        });
 
         getViews(function(data){
             view = data;
@@ -311,9 +280,6 @@ $(function(){
             }
         });
 
-
-
-        //console.log(localStorage.getItem('likes'));
     });
 
     function getIp(myip,callback){
