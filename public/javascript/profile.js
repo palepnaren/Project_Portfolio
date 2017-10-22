@@ -273,7 +273,7 @@ $(function(){
                 height:650,
                 width:450,
                 draggable:false,
-                resizable:false,
+                resizable:true,
                 closeOnEscape:true
             }); 
         });
