@@ -71,7 +71,7 @@ $(function(){
     var view = 0;
     var navs = $('nav ul li:not(:last-child) a');
     var navHeight = $('nav').height();
-    var sections = $('div#bg-video, div#aboutMe, div#contact, div#download');
+    var sections = $('div#bg-video, div#aboutMe, div#skill, div#contact, div#download');
     var doc = $(document);
     var windows = $(window);
 
