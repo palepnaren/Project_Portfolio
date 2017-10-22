@@ -124,7 +124,7 @@ div#number p{
     font-size: 16px;
     position: relative;
     bottom: -100px;
-    color: blue;
+    color: white;
 }
 
 label{
@@ -295,7 +295,7 @@ a:hover{
 }
 
 a.active{
-    background-color: blue;
+    background-color: rgba(136,144,22,0.5);
     padding: 5px;
     border-radius: 5px;
 }
