@@ -123,7 +123,7 @@ $(function(){
         alert("email sent successfully");
         window.setTimeout(function(){
             window.location.assign("https://narentest.herokuapp.com/");
-        },1000);
+        },100);
     });
 
     $("#collapse-navbar").on('click',function(){
