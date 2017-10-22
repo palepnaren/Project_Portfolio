@@ -272,7 +272,7 @@ $(function(){
             $('#dialog').dialog({
                 height:650,
                 width:450,
-                draggable:false,
+                draggable:true,
                 resizable:true,
                 closeOnEscape:true
             }); 
