@@ -3,6 +3,7 @@
 var $ = jQuery.noConflict();
 $(function(){
 
+    $('video').prop('muted',true);
     var myip="";
 
     var Track ={};
@@ -117,9 +118,12 @@ $(function(){
 
         });
     });
-
-
-    $('video').prop('muted',true);
+    
+    $('#email-form').on("submit",function(e){
+        e.preventDefault();
+        alert("email sent successfully");
+        window.location.assign("/");
+    });
 
     $("#collapse-navbar").on('click',function(){
 

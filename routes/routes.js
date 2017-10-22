@@ -76,11 +76,13 @@ exports.email = function(req,res){
         }
 
         if(error!==''){
-            res.render('profile',{error:error,redirect:'/',success:success,class:'hide'});
+            res.status(400).send("Error in data");
+            //res.render('profile',{error:error,redirect:'/',success:success,class:'hide'});
         }else{
             console.log(chalk.green('Message sent successfully: '+info.messageId));
-            success = 'Message sent successfully';
-            res.render('profile',{error:error,redirect:'/',success:success,prop:'hide'});
+            //success = 'Message sent successfully';
+            //res.render('profile',{error:error,redirect:'/',success:success,prop:'hide'});
+            res.status(200).send("email sent successfully");
         }
 
     });

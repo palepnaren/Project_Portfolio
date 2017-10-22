@@ -52,6 +52,7 @@
 </div>
 <div id="contact" class="container">
     <div class="row">
+<!--
         <div id="msg" class="col-md-4 col-md-offset-4">
             <% if(typeof(error)!=='undefined' && typeof(redirect)!=='undefined' && typeof(success)!=='undefined') {%>
             <% if(error !== ''){%>
@@ -69,11 +70,12 @@
             <button type="submit" class="btn btn-default" id="redirect" value="Home" onClick="location.href='<%=redirect%>'">Home</button>
             <% } %>
         </div>
-        <div id="form" class="col-md-4 col-md-offset-4 panel panel-default <% if(typeof(prop)!=='undefined') {%> <%= prop%> <% }%>">
+-->
+        <div id="form" class="col-md-4 col-md-offset-4 panel panel-default ">
 
             <h1 align="center" class="margin-base-vertical">You can contact by sending me an email or by calling.</h1>
 
-            <form class="margin-base-vertical" method="post" action="/email">
+            <form id="email-form" class="margin-base-vertical" method="post" action="/email">
                 <p class="input-group ">
                     <span class="input-group-addon"><span class="glyphicon glyphicon-user"></span></span>
                     <input type="text" class="form-control col-xs-10 col-lg-10 col-sm-10 col-md-10" id="name" name="full_name" placeholder="Enter name" > 
