@@ -23,16 +23,30 @@ body{
     height: 100%;
 }
 
-#tx-video p{
+#tx-video p#main-text{
+    position: absolute;
+    z-index: 8;
+    top: 45%;
+    left: 50%;
+    text-align: center;
+    transform: translate(-50%,-50%);
+    font-size: 36px;
+    color: white;
+
+}
+
+#tx-video p#small{
     position: absolute;
     z-index: 8;
     top: 50%;
     left: 50%;
+    text-align: center;
     transform: translate(-50%,-50%);
-    font-size: 36px;
-    color: black;
+    font-size: 20px;
+    color: white;
 
 }
+
 
 /*
 #profile-img{
@@ -347,6 +361,17 @@ a:active{
 
 @media only screen and (max-width:768px){
 
+    div#tx-video > p#main-text{
+        top: 18%;
+        text-align: center;
+        font-size: 20px;
+    }
+    
+    div#tx-video > p#small{
+        top: 21%;
+        text-align: center;
+        font-size: 16px;
+    }
     footer ul.right{
         position: relative;
         top: 20px;
@@ -373,11 +398,6 @@ a:active{
         margin-top: -10px;
     }
 
-    div#tx-video > p{
-        top: 22%;
-        font-size: 24px;
-    }
-
     #profile-img img{
         width: 100px;
         height: 100px;
@@ -393,11 +413,34 @@ a:active{
 
 
 }
-
+@media only screen and (min-width:568px) and (max-width:737px){
+    div#tx-video > p#main-text{
+        position: absolute;
+        top: -30%;
+        text-align: center;
+        transform: translate(-50%,560%);
+        font-size: 22px;
+    }
+    
+    div#tx-video > p#small{
+        position: absolute;
+        top: -60%;
+        transform: translate(-50%,350%);
+        text-align: center;
+        font-size: 19px;
+    }
+}
 @media only screen and (max-width:1024px){
-    div#tx-video > p{
-        top: 22%;
-        font-size: 24px;
+    div#tx-video > p#main-text{
+        top: 16%;
+        text-align: center;
+        font-size: 22px;
+    }
+    
+    div#tx-video > p#small{
+        top: 21%;
+        text-align: center;
+        font-size: 19px;
     }
 
     #profile-img img{
@@ -489,14 +532,23 @@ a:active{
 /*small devices*/
 @media only screen and (min-width:310px) and (max-width : 650px) {
 
+
     div#number{
         position: relative;
         bottom: 30px;
     }
     
-    div#tx-video > p{
-        top: 18%;
-        font-size: 24px;
+    div#tx-video  p#main-text{
+        top: 17%;
+        text-align: center;
+        font-size: 12px;
+        color: white;
+    }
+    div#tx-video  p#small{
+        top: 21%;
+        text-align: center;
+        font-size: 10px;
+        color: white;
     }
 
     #profile-img img{
