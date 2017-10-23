@@ -200,11 +200,16 @@ div.git > p{
     height: 400px;
 }
 
-.carousel-caption> span{
-    color: white;
+.carousel-caption> h3{
     position: relative;
+/*
     bottom: 30px;
     font-size: 20px;
+*/
+}
+
+.carousel-caption> p{
+    position: relative;
 }
 
 /*
@@ -212,17 +217,13 @@ div.git > p{
     padding: 5px;
 }
 */
-div.item>h3{
+div.item>span{
     color: white;
     position: relative;
-    top: 25%;
+    top: 30%;
+    font-size: 20px;
+}
 
-}
-div.item>p{
-    color: white;
-    position: relative;
-    top: 26%;
-}
 .alert{
     margin-top: -20px;
     width: 700px;
