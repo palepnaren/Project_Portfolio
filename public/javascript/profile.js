@@ -74,11 +74,6 @@ $(function(){
     var sections = $('div#bg-video, div#aboutMe, div#skill, div#contact, div#download');
     var doc = $(document);
     var windows = $(window);
-
-
-    windows.on('load',function(){
-       window.location.assign("https://narentest.herokuapp.com"); 
-    });
     
     windows.on('scroll resize',function(e){
         var currentPos = windows.scrollTop();
