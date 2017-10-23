@@ -259,7 +259,11 @@ nav ul.right li{
     display: none;
 }
 
-.liquidFillGaugeText { font-family: Helvetica; font-weight: bold; }        
+.liquidFillGaugeText { 
+    font-family: Helvetica; 
+    font-weight: bold; 
+} 
+
 #skills{
     background: rgba(126,195,208,0.7);
 }
@@ -341,7 +345,7 @@ a:active{
     display: none;
 }
 
-@media only screen and (max-width:750px){
+@media only screen and (max-width:768px){
 
     footer ul.right{
         position: relative;
@@ -390,7 +394,7 @@ a:active{
 
 }
 
-@media only screen and (max-width:750px){
+@media only screen and (max-width:768px){
 
     #navbar-custom.responsive-navbar > ul.left > li:not(:last-child){
         display: block;

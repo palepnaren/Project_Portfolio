@@ -80,7 +80,7 @@ $(function(){
         var currentPos = windows.scrollTop();
 
 
-        if(windows.width() <= 740){
+        if(windows.width() <= 768){
             if(currentPos == 0){
                 $('nav.fixed-navbar').css('background','rgba(0,2,0,0.9)');
                 $('nav.fixed-navbar').removeClass('effects');
