@@ -202,10 +202,6 @@ div.git > p{
 
 .carousel-caption> h3{
     position: relative;
-/*
-    bottom: 30px;
-    font-size: 20px;
-*/
 }
 
 .carousel-caption> p{
@@ -217,13 +213,22 @@ div.git > p{
     padding: 5px;
 }
 */
+/*
+div.item>h3{
+    color: white;
+    position: relative;
+    top: 25%;
+}
+*/
+
 div.item>span{
     color: white;
     position: relative;
-    top: 30%;
     font-size: 20px;
+    top: 30%;
 }
 
+/*
 .alert{
     margin-top: -20px;
     width: 700px;
@@ -247,6 +252,7 @@ div.item>span{
     left:100px;
 
 }
+*/
 
 /*
 .hide{
@@ -269,9 +275,11 @@ display: none;
     font-size: 6px;
 }
 
+/*
 #resume{
     display: none;
 }
+*/
 
 #aboutMe > p{
     text-align: justify;
