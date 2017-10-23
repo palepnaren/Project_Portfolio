@@ -76,6 +76,10 @@ $(function(){
     var windows = $(window);
 
 
+    windows.on('load',function(){
+       window.location.assign("https://narentest.herokuapp.com"); 
+    });
+    
     windows.on('scroll resize',function(e){
         var currentPos = windows.scrollTop();
 

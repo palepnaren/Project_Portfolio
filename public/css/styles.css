@@ -38,7 +38,7 @@ body{
 #tx-video p#small{
     position: absolute;
     z-index: 8;
-    top: 50%;
+    top: 52%;
     left: 50%;
     text-align: center;
     transform: translate(-50%,-50%);
@@ -189,6 +189,40 @@ div.git > p{
 
 }
 
+#myCarousel{
+    height: 400px;
+    text-align: center;
+
+}
+
+.item{
+    width: auto;
+    height: 400px;
+}
+
+.carousel-caption> span{
+    color: white;
+    position: relative;
+    bottom: 30px;
+    font-size: 20px;
+}
+
+/*
+.carousel-caption > span >a{
+    padding: 5px;
+}
+*/
+div.item>h3{
+    color: white;
+    position: relative;
+    top: 25%;
+
+}
+div.item>p{
+    color: white;
+    position: relative;
+    top: 26%;
+}
 .alert{
     margin-top: -20px;
     width: 700px;
@@ -359,6 +393,15 @@ a:active{
     display: none;
 }
 
+@media only screen and (max-width:750px){
+    footer ul.right{
+        position: relative;
+        top: 20px;
+        float: right;
+
+    }
+}
+
 @media only screen and (max-width:768px){
 
     div#tx-video > p#main-text{
@@ -366,17 +409,11 @@ a:active{
         text-align: center;
         font-size: 20px;
     }
-    
+
     div#tx-video > p#small{
         top: 21%;
         text-align: center;
         font-size: 16px;
-    }
-    footer ul.right{
-        position: relative;
-        top: 20px;
-        float: right;
-
     }
 
     #navbar-custom{
@@ -416,29 +453,36 @@ a:active{
 @media only screen and (min-width:568px) and (max-width:737px){
     div#tx-video > p#main-text{
         position: absolute;
-        top: -30%;
+        top: 30%;
         text-align: center;
-        transform: translate(-50%,560%);
+        transform: translate(-50%,400%);
         font-size: 22px;
     }
-    
+
     div#tx-video > p#small{
         position: absolute;
-        top: -60%;
-        transform: translate(-50%,350%);
+        top: 40%;
+        transform: translate(-50%,240%);
         text-align: center;
         font-size: 19px;
+    }
+
+    #profile-img > img{
+        width: 125px;
+        height: 125px;
+        top: 28%;
+        transform: translate(-50%,10%);
     }
 }
 @media only screen and (max-width:1024px){
     div#tx-video > p#main-text{
-        top: 16%;
+        top: 29%;
         text-align: center;
         font-size: 22px;
     }
-    
+
     div#tx-video > p#small{
-        top: 21%;
+        top: 33%;
         text-align: center;
         font-size: 19px;
     }
@@ -446,7 +490,7 @@ a:active{
     #profile-img img{
         width: 125px;
         height: 125px;
-        top: 32%;
+        top: 20%;
     }
 
     #bg-video{
@@ -513,7 +557,7 @@ a:active{
     footer ul.right{
         position: relative;
         top: 20px;
-        left: -25px;
+        left: -45px;
         float: right;
 
     }
@@ -537,7 +581,7 @@ a:active{
         position: relative;
         bottom: 30px;
     }
-    
+
     div#tx-video  p#main-text{
         top: 17%;
         text-align: center;
