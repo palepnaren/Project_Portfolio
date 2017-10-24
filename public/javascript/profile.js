@@ -85,7 +85,7 @@ $(function(){
         }
     });
     
-    windows.on('scroll resize',function(e){
+    windows.on('scroll resize load',function(e){
         var currentPos = windows.scrollTop();
 
 
