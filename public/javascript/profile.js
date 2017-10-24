@@ -74,17 +74,17 @@ $(function(){
     var sections = $('div#image, div#aboutMe, div#skill, div#contact, div#download');
     var doc = $(document);
     var windows = $(window);
-    
+
     $('.scroll-animate').on('click',function(){
         var target = $(this.hash);
         if(target){
-        $('html,body').animate({
-            scrollTop:(target.offset().top-60)
-        },2000,"easeInOutExpo");
+            $('html,body').animate({
+                scrollTop:(target.offset().top-60)
+            },2000,"easeInOutExpo");
             return false;
         }
     });
-    
+
     windows.on('scroll resize load',function(e){
         var currentPos = windows.scrollTop();
 
@@ -127,7 +127,7 @@ $(function(){
 
         });
     });
-    
+
     $('#email-form').on("submit",function(e){
         alert("email sent successfully");
         window.setTimeout(function(){
@@ -557,9 +557,14 @@ function init() {
     map = new google.maps.Map(mapElement, mapOptions);
 
     // Custom Map Marker Icon - Customize the map-marker.png file to customize your icon
-    var image = 'img/map-marker.svg';
+//    var image = 'images/icons8-Marker-26.png';
+    var icon = {
+        url: "images/icons8-Marker-26.png", // url
+        scaledSize: new google.maps.Size(50, 50), // scaled size
+    };
     var myLatLng = new google.maps.LatLng(33.0198,-96.6989);
     var beachMarker = new google.maps.Marker({
+        icon:icon,
         position: myLatLng,
         map: map,
     });
