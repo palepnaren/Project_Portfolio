@@ -71,9 +71,19 @@ $(function(){
     var view = 0;
     var navs = $('nav ul li:not(:last-child) a');
     var navHeight = $('nav').height();
-    var sections = $('div#bg-video, div#aboutMe, div#skill, div#contact, div#download');
+    var sections = $('div#image, div#aboutMe, div#skill, div#contact, div#download');
     var doc = $(document);
     var windows = $(window);
+    
+    $('.scroll-animate').on('click',function(){
+        var target = $(this.hash);
+        if(target){
+        $('html,body').animate({
+            scrollTop:(target.offset().top-60)
+        },2000,"easeInOutExpo");
+            return false;
+        }
+    });
     
     windows.on('scroll resize',function(e){
         var currentPos = windows.scrollTop();

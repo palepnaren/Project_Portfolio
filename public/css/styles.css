@@ -5,6 +5,83 @@ body{
     padding: 0px;
 }
 
+html {
+    width: 100%;
+    height: 100%; 
+}
+
+.masthead {
+    display: table;
+    width: 100%;
+    height: auto;
+    padding: 200px 0;
+    text-align: center;
+    color: white;
+    background: url("/images/naren.jpeg") no-repeat top center scroll;
+    transform: rotate(180deg);
+    -webkit-transform:rotate(180deg);
+    -moz-transform:rotate(180deg);
+    -o-transform:rotate(180deg);
+    background-color: black;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover; 
+}
+.masthead .intro-body {
+    display: table-cell;
+    vertical-align: middle; 
+}
+.masthead .intro-body h1.brand-heading {
+    position: relative;
+    top: 200px;
+    font-size: 36px;
+}
+.masthead .intro-body .intro-text {
+    position: relative;
+    top: 70px;
+    font-size: 18px;
+}
+@media (min-width: 768px) {
+    .masthead {
+        height: 100%;
+        padding: 0; 
+    }
+    .masthead .intro-body .brand-heading {
+        font-size: 100px; 
+    }
+    .masthead .intro-body .intro-text {
+        font-size: 22px; 
+    } 
+}
+div.col-lg-8 h1,div.col-lg-8 p,a>i{
+    transform: rotate(180deg);
+    text-align: center;
+}
+
+.btn-circle {
+    position: relative;
+    top: -60px;
+    font-size: 26px;
+    width: 55px;
+    height: 55px;
+    margin-top: 15px;
+    line-height: 45px;
+    -webkit-transition: background 0.3s ease-in-out;
+    -moz-transition: background 0.3s ease-in-out;
+    transition: background 0.3s ease-in-out;
+    color: white;
+    border: 2px solid white;
+    border-radius: 100% !important;
+    background: transparent; }
+.btn-circle:focus, .btn-circle:hover {
+    color: white;
+    outline: none;
+    background: rgba(255, 255, 255, 0.1); 
+}
+
+
+
 #bg-video{
     position: relative;
     min-height: 100%;
@@ -210,14 +287,14 @@ div.git > p{
 
 /*
 .carousel-caption > span >a{
-    padding: 5px;
+padding: 5px;
 }
 */
 /*
 div.item>h3{
-    color: white;
-    position: relative;
-    top: 25%;
+color: white;
+position: relative;
+top: 25%;
 }
 */
 
@@ -230,26 +307,26 @@ div.item>span{
 
 /*
 .alert{
-    margin-top: -20px;
-    width: 700px;
-    position: relative;
-    left: 25%;
-    transform: translate(-50%,10%);
+margin-top: -20px;
+width: 700px;
+position: relative;
+left: 25%;
+transform: translate(-50%,10%);
 }
 
 
 #redirect{
-    margin-top: 20px;
-    position: relative;
-    left: 12.5%;
-    transform: translate(50%,-50%);
+margin-top: 20px;
+position: relative;
+left: 12.5%;
+transform: translate(50%,-50%);
 
 }
 
 #msg{
-    margin-top: 80px;
-    position: relative;
-    left:100px;
+margin-top: 80px;
+position: relative;
+left:100px;
 
 }
 */
@@ -277,7 +354,7 @@ display: none;
 
 /*
 #resume{
-    display: none;
+display: none;
 }
 */
 
