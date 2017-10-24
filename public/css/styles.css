@@ -64,7 +64,7 @@ z-index: 8;
     position: absolute;
     top: 30%;
     left: 50%;
-    transform: translate(-50%,-50%);
+    transform: translate(-50%,-50%) rotate(180deg);
     z-index: 8;
     width: 150px;
     height: 150px;
@@ -98,7 +98,7 @@ nav.fixed-navbar.effects:after{
     -o-border-radius: 50%;
     margin-top: 40px;
     margin-left: 50%;
-    transform: translate(-50%,-20%);
+    transform: translate(-50%,-20%) rotate(180deg);
     border:5px solid rgba(96,112,119,0.9);   
 }
 
