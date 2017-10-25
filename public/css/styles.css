@@ -463,7 +463,6 @@ footer ul.right li{
     color: red;
 }
 
-
 a{
     color: chartreuse;
     font-size: 18px;
@@ -484,6 +483,7 @@ a:active{
     padding: 5px;
     border-radius: 5px;
 }
+
 
 #navbar-custom > ul.left > li.icon{
     display: none;

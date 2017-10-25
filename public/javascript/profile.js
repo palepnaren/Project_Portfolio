@@ -167,6 +167,12 @@ $(function(){
         }
 
     });
+    
+    $('footer .fa').hover(function(){
+       $(this).css("cursor","pointer"); 
+    },function(){
+        $(this).css("cursor","default");
+    });
 
 
     $('ul.left li a[href*="#"]:not([href="#"])').on('click',function(){
