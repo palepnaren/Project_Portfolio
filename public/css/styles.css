@@ -55,9 +55,11 @@ html {
     }
     .masthead .intro-body .brand-heading {
         font-size: 80px; 
+        color: black;
     }
     .masthead .intro-body .intro-text {
-        font-size: 22px; 
+        font-size: 22px;
+        color: black;
     } 
 }
 div.col-lg-8 h1,div.col-lg-8 p,a>i{
