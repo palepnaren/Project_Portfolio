@@ -8,60 +8,60 @@ $(function(){
 
     var Track ={};
 
-    var RTCPeerConnection = window.webkitRTCPeerConnection || window.mozRTCPeerConnection;
-
-    if(RTCPeerConnection)(function(){// this code credit goes to http://net.ipcalf.com/
-        var rtc = new RTCPeerConnection({iceservers:[]});
-        if(1 || window.mozRTCPeerConnection){
-            rtc.createDataChannel('',{reliable:false});
-        }
-
-        rtc.onicecandidate = function(evt){
-
-            if(evt.candidate){
-                SDP('a='+evt.candidate.candidate);
-            }
-        }
-
-        rtc.createOffer(function(offerDesc){
-            SDP(offerDesc.sdp);
-            rtc.setLocalDescription(offerDesc);
-        },function(error){ console.warn("offer failed "+e);});
-
-        var addrs = Object.create(null);
-        addrs["0.0.0.0"] = false;
-        function updateDisplay(newAddr){
-            if(newAddr in addrs)return;
-            else addrs[newAddr] = true;
-            var displayAddr = Object.keys(addrs).filter(function(k){return addrs[k];});
-            //myip = displayAddr[0];
-            //            console.log(myip);
-            //            if(displayAddr.length>1){
-            //                myip = displayAddr[0];
-            //            }else{
-            //                myip = displayAddr;
-            //            }
-            //console.log("addrs "+myip);
-        }
-
-        function SDP(sdp){
-            var hosts = [];
-            sdp.split('\r\n').forEach(function(line){
-                //console.log("SDP "+line);
-
-                if(~line.indexOf("a=candidate")){
-                    var parts = line.split(' ');
-                    var addr = parts[4];
-                    var type = parts[7];
-                    if(type=="host") updateDisplay(addr);
-                }else if(~line.indexOf('c=')){
-                    var parts = line.split(' ');
-                    var addr = parts[2];
-                    updateDisplay(addr);
-                }
-            });
-        }
-    })();
+//    var RTCPeerConnection = window.webkitRTCPeerConnection || window.mozRTCPeerConnection;
+//
+//    if(RTCPeerConnection)(function(){// this code credit goes to http://net.ipcalf.com/
+//        var rtc = new RTCPeerConnection({iceservers:[]});
+//        if(1 || window.mozRTCPeerConnection){
+//            rtc.createDataChannel('',{reliable:false});
+//        }
+//
+//        rtc.onicecandidate = function(evt){
+//
+//            if(evt.candidate){
+//                SDP('a='+evt.candidate.candidate);
+//            }
+//        }
+//
+//        rtc.createOffer(function(offerDesc){
+//            SDP(offerDesc.sdp);
+//            rtc.setLocalDescription(offerDesc);
+//        },function(error){ console.warn("offer failed "+e);});
+//
+//        var addrs = Object.create(null);
+//        addrs["0.0.0.0"] = false;
+//        function updateDisplay(newAddr){
+//            if(newAddr in addrs)return;
+//            else addrs[newAddr] = true;
+//            var displayAddr = Object.keys(addrs).filter(function(k){return addrs[k];});
+//            //myip = displayAddr[0];
+//            //            console.log(myip);
+//            //            if(displayAddr.length>1){
+//            //                myip = displayAddr[0];
+//            //            }else{
+//            //                myip = displayAddr;
+//            //            }
+//            //console.log("addrs "+myip);
+//        }
+//
+//        function SDP(sdp){
+//            var hosts = [];
+//            sdp.split('\r\n').forEach(function(line){
+//                //console.log("SDP "+line);
+//
+//                if(~line.indexOf("a=candidate")){
+//                    var parts = line.split(' ');
+//                    var addr = parts[4];
+//                    var type = parts[7];
+//                    if(type=="host") updateDisplay(addr);
+//                }else if(~line.indexOf('c=')){
+//                    var parts = line.split(' ');
+//                    var addr = parts[2];
+//                    updateDisplay(addr);
+//                }
+//            });
+//        }
+//    })();
 
 
     var counter =0;
