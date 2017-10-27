@@ -25,4 +25,5 @@ var appTracking = new mongoose.Schema({
     views:{type:Number,required:true}
 });
 
+
 mongoose.model('Tracking',appTracking);
