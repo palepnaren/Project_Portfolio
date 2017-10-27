@@ -34,13 +34,19 @@ html {
 }
 .masthead .intro-body h1.brand-heading {
     position: relative;
-    top: 200px;
+    top: 250px;
+    right: 20px;
     font-size: 36px;
+    color: whitesmoke;
+    overflow: hidden;
 }
 .masthead .intro-body .intro-text {
     position: relative;
-    top: 70px;
+    top: 125px;
+    right: 20px;
     font-size: 18px;
+    color: whitesmoke;
+    overflow: hidden;
 }
 @media (min-width: 768px) {
     .masthead {
@@ -48,7 +54,7 @@ html {
         padding: 0; 
     }
     .masthead .intro-body .brand-heading {
-        font-size: 100px; 
+        font-size: 80px; 
     }
     .masthead .intro-body .intro-text {
         font-size: 22px; 
@@ -56,12 +62,16 @@ html {
 }
 div.col-lg-8 h1,div.col-lg-8 p,a>i{
     transform: rotate(180deg);
+    -webkit-transform: rotate(180deg);
+    -moz-transform: rotate(180deg);
+    -o-transform: rotate(180deg);
     text-align: center;
 }
 
 .btn-circle {
     position: relative;
-    top: -60px;
+    top: -10px;
+    right: 20px;
     font-size: 26px;
     width: 55px;
     height: 55px;
@@ -69,10 +79,14 @@ div.col-lg-8 h1,div.col-lg-8 p,a>i{
     line-height: 45px;
     -webkit-transition: background 0.3s ease-in-out;
     -moz-transition: background 0.3s ease-in-out;
+    -o-transition: background 0.3s ease-in-out;
     transition: background 0.3s ease-in-out;
-    color: white;
-    border: 2px solid white;
+    color: whitesmoke;
+    border: 2px solid whitesmoke;
     border-radius: 100% !important;
+    -webkit-border-radius: 100% !important;
+    -moz-border-radius: 100% !important;
+    -o-border-radius: 100% !important;
     background: transparent; }
 .btn-circle:focus, .btn-circle:hover {
     color: white;
@@ -172,6 +186,9 @@ nav.fixed-navbar.effects:after{
     width: 110px;
     height: 110px;
     border-spacing: 40px;
+    -webkit-border-spacing: 40px;
+    -moz-border-spacing: 40px;
+    -o-border-spacing: 40px;
     background:rgba(96,112,119,0.9) url("/images/naren.jpeg") center / cover;
     box-sizing: border-box;
     -webkit-box-sizing: border-box;
@@ -183,6 +200,9 @@ nav.fixed-navbar.effects:after{
     -o-border-radius: 50%;
     margin-top: 40px;
     margin-left: 50%;
+    -webkit-transform: translate(-50%,-20%) rotate(180deg);
+    -moz-transform: translate(-50%,-20%) rotate(180deg);
+    -o-transform: translate(-50%,-20%) rotate(180deg);
     transform: translate(-50%,-20%) rotate(180deg);
     border:5px solid rgba(96,112,119,0.9);   
 }
@@ -202,6 +222,9 @@ nav.fixed-navbar.effects:after{
     margin: 40px;
     padding: 20px;
     box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -o-box-sizing: border-box;
 }
 
 #indent{
@@ -267,6 +290,9 @@ div.git > p{
     margin-top: 30px;
     left: 50%;
     transform: translate(-50%,-50%);
+    -webkit-transform: translate(-50%,-50%);
+    -moz-transform: translate(-50%,-50%);
+    -o-transform: translate(-50%,-50%);
     font-size: 24px;
     width: 200px;
     border: 1px solid blue;
@@ -404,7 +430,7 @@ nav ul.right li{
 }
 
 .liquidFillGaugeText { 
-    font-family: Helvetica; 
+    font-family: Helvetica sans-serif; 
     font-weight: bold; 
 } 
 
@@ -433,6 +459,9 @@ svg{
     position: absolute;
     left:0px;
     transform: translate(10%,50%);
+    -webkit-transform: translate(10%,50%);
+    -moz-transform: translate(10%,50%);
+    -o-transform: translate(10%,50%);
 }
 
 footer ul.left{
@@ -476,12 +505,18 @@ a.active{
     background-color: rgba(136,144,22,0.5);
     padding: 5px;
     border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -o-border-radius: 5px;
 }
 
 a:active{
     background-color: orange;
     padding: 5px;
     border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -o-border-radius: 5px;
 }
 
 
@@ -670,6 +705,9 @@ a:active{
         margin: 40px;
         padding: 20px;
         box-sizing: border-box;
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        -o-box-sizing: border-box;
     }
     .content{
         overflow-y: scroll;
