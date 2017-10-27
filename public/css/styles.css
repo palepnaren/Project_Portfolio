@@ -533,12 +533,15 @@ svg{
 }
 
 .relative-svg{
+    padding: 0px 10px;
     position: absolute;
-    left:0px;
-    transform: translate(10%,50%);
-    -webkit-transform: translate(10%,50%);
-    -moz-transform: translate(10%,50%);
-    -o-transform: translate(10%,50%);
+    top: 0px;
+    left: 0px;
+    text-align: center;
+    transform: translate(0%,50%);
+    -webkit-transform: translate(0%,50%);
+    -moz-transform: translate(0%,50%);
+    -o-transform: translate(0%,50%);
 }
 
 footer ul.left{

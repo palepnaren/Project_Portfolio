@@ -103,10 +103,12 @@ $(function(){
             $('nav.fixed-navbar').css('background','none');
         }
 
-        if(windows.scrollTop() > 50){
-            $('nav.fixed-navbar').css('background','rgba(0,2,0,0.9)');
-            $('nav.fixed-navbar').addClass('effects');
-            $('#profile-img').hide();
+        if(windows.width() >=768){
+            if(windows.scrollTop() > 50){
+                $('nav.fixed-navbar').css('background','rgba(0,2,0,0.9)');
+                $('nav.fixed-navbar').addClass('effects');
+                $('#profile-img').hide();
+            }
         }
 
     });
@@ -144,21 +146,23 @@ $(function(){
         var navbar = $("#navbar-custom");
         windows.on('scroll', function(){
             $('nav.fixed-navbar').removeClass('effects');
-            $('#profile-img').show();
+            //            $('#profile-img').show();
         });
         if(navbar.hasClass('responsive-navbar')){
             navbar.removeClass('responsive-navbar');
             windows.on('scroll', function(){
                 var currentPos = windows.scrollTop();
-                if($('nav.fixed-navbar').hasClass('effects')){
-                    $('nav.fixed-navbar').removeClass('effects');
-                }else{
-                    $('nav.fixed-navbar').addClass('effects');
+                if(windows.width() >=768){
+                    if($('nav.fixed-navbar').hasClass('effects')){
+                        $('nav.fixed-navbar').removeClass('effects');
+                    }else{
+                        $('nav.fixed-navbar').addClass('effects');
+                    }
                 }
-                $('#profile-img').hide();
+                //                $('#profile-img').hide();
                 if(currentPos == 0){
                     $('nav.fixed-navbar').removeClass('effects');
-                    $('#profile-img').show();
+                    //                    $('#profile-img').show();
                 }
             });
         }else{
@@ -167,9 +171,9 @@ $(function(){
         }
 
     });
-    
+
     $('footer .fa').hover(function(){
-       $(this).css("cursor","pointer"); 
+        $(this).css("cursor","pointer"); 
     },function(){
         $(this).css("cursor","default");
     });
@@ -563,7 +567,7 @@ function init() {
     map = new google.maps.Map(mapElement, mapOptions);
 
     // Custom Map Marker Icon - Customize the map-marker.png file to customize your icon
-//    var image = 'images/icons8-Marker-26.png';
+    //    var image = 'images/icons8-Marker-26.png';
     var icon = {
         url: "images/icons8-Marker-26.png", // url
         scaledSize: new google.maps.Size(50, 50), // scaled size
