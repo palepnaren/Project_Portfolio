@@ -34,7 +34,7 @@ $(function(){
             if(newAddr in addrs)return;
             else addrs[newAddr] = true;
             var displayAddr = Object.keys(addrs).filter(function(k){return addrs[k];});
-            myip = displayAddr[0];
+            //myip = displayAddr[0];
             //            console.log(myip);
             //            if(displayAddr.length>1){
             //                myip = displayAddr[0];
@@ -83,6 +83,11 @@ $(function(){
             },2000,"easeInOutExpo");
             return false;
         }
+    });
+
+
+    $.getJSON("https://api.ipify.org?format=json",function(data){
+        myip = data.ip;
     });
 
     windows.on('scroll resize load',function(e){
