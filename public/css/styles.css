@@ -55,13 +55,21 @@ html {
     }
     .masthead .intro-body .brand-heading {
         font-size: 80px; 
-        color: black;
     }
     .masthead .intro-body .intro-text {
         font-size: 22px;
+    } 
+}
+
+@media (max-width: 768px) {
+    .masthead .intro-body .brand-heading { 
+        color: black;
+    }
+    .masthead .intro-body .intro-text {
         color: black;
     } 
 }
+
 div.col-lg-8 h1,div.col-lg-8 p,a>i{
     transform: rotate(180deg);
     -webkit-transform: rotate(180deg);
