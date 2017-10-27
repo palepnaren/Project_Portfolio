@@ -71,22 +71,22 @@ html {
 @media (max-width: 760px) {
     .masthead .intro-body h1.brand-heading { 
         color: black;
-        font-size: 30px; 
+        font-size: 28px; 
     }
     .masthead .intro-body .intro-text {
         color: black;
-        font-size: 22px;
+        font-size: 18px;
     } 
 }
 
 @media (max-width: 320px) {
     .masthead .intro-body h1.brand-heading { 
         color: black;
-        font-size: 26px; 
+        font-size: 24px; 
     }
     .masthead .intro-body .intro-text {
         color: black;
-        font-size: 18px;
+        font-size: 16px;
     } 
 }
 
