@@ -11,10 +11,10 @@ html {
 }
 
 *{
-    font-family: "Comic Sans MS" Helvetica sans-serif;
-    -webkit-font-family: "Comic Sans MS" Helvetica sans-serif;
-    -moz-font-family: "Comic Sans MS"  Helvetica sans-serif;
-    -o-font-family: "Comic Sans MS" Helvetica sans-serif;
+    font-family: "Comic Sans MS", "Helvetica", sans-serif;
+    -webkit-font-family: "Comic Sans MS", "Helvetica", sans-serif;
+    -moz-font-family: "Comic Sans MS",  "Helvetica", sans-serif;
+    -o-font-family: "Comic Sans MS", "Helvetica", sans-serif;
 }
 
 .masthead {  /* credit for this part startbootstrap grayscale*/
