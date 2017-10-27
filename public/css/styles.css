@@ -11,10 +11,10 @@ html {
 }
 
 *{
-    font-family: "Comic Sans MS", cursive, sans-serif;
-    -webkit-font-family: "Comic Sans MS", cursive, sans-serif;
-    -moz-font-family: "Comic Sans MS", cursive, sans-serif;
-    -o-font-family: "Comic Sans MS", cursive, sans-serif;
+    font-family: "Comic Sans MS", monospace,sans-serif;
+    -webkit-font-family: "Comic Sans MS", monospace, sans-serif;
+    -moz-font-family: "Comic Sans MS", monospace, sans-serif;
+    -o-font-family: "Comic Sans MS", monospace, sans-serif;
 }
 
 .masthead {  /* credit for this part startbootstrap grayscale*/
