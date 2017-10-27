@@ -61,7 +61,7 @@ html {
     } 
 }
 
-@media (max-width: 768px) {
+@media (max-width: 760px) {
     .masthead .intro-body h1.brand-heading { 
         color: black;
         font-size: 30px; 
