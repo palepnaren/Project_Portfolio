@@ -53,7 +53,7 @@ html {
         height: 100%;
         padding: 0; 
     }
-    .masthead .intro-body .brand-heading {
+    .masthead .intro-body h1.brand-heading {
         font-size: 80px; 
     }
     .masthead .intro-body .intro-text {
@@ -62,7 +62,7 @@ html {
 }
 
 @media (max-width: 768px) {
-    .masthead .intro-body .brand-heading { 
+    .masthead .intro-body h1.brand-heading { 
         color: black;
     }
     .masthead .intro-body .intro-text {
