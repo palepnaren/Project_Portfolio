@@ -10,6 +10,13 @@ html {
     height: 100%; 
 }
 
+*{
+    font-family: "Comic Sans MS", cursive, sans-serif;
+    -webkit-font-family: "Comic Sans MS", cursive, sans-serif;
+    -moz-font-family: "Comic Sans MS", cursive, sans-serif;
+    -o-font-family: "Comic Sans MS", cursive, sans-serif;
+}
+
 .masthead {  /* credit for this part startbootstrap grayscale*/
     display: table;
     width: 100%;
@@ -241,6 +248,20 @@ nav.fixed-navbar.effects:after{
     width: auto;   
 }
 
+#about-me{
+    margin-top: 40px;
+    color: white;
+    text-decoration-line: underline;
+    -webkit-text-decoration-line: underline;
+    -moz-text-decoration-line: underline;
+    -o-text-decoration-line: underline;
+    text-underline-position: under;
+    -webkit-text-underline-position: under;
+    -moz-text-underline-position: under;
+    -o-text-underline-position: under;
+    font-size: 30px;
+}
+
 #aboutMe{
     margin: 40px;
     padding: 20px;
@@ -262,6 +283,20 @@ nav.fixed-navbar.effects:after{
     height: 800px;
     background: rgba(96,112,119,0.9);
     overflow: hidden;
+}
+
+#contact #contact-text{
+    color: white;
+    font-size: 30px;
+    text-decoration-line: underline;
+    -webkit-text-decoration-line: underline;
+    -moz-text-decoration-line: underline;
+    -o-text-decoration-line: underline;
+    text-underline-position: under;
+    -webkit-text-underline-position: under;
+    -moz-text-underline-position: under;
+    -o-text-underline-position: under;
+    margin-top: 40px;
 }
 
 div#number p{
@@ -470,6 +505,15 @@ svg{
 }
 
 #skill-text{
+    text-decoration-line: underline;
+    -webkit-text-decoration-line: underline;
+    -moz-text-decoration-line: underline;
+    -o-text-decoration-line: underline;
+    text-underline-position: under;
+    -webkit-text-underline-position: under;
+    -moz-text-underline-position: under;
+    -o-text-underline-position: under;
+    margin-top: 40px;
     font-size: 30px;
     color: white;
 }
